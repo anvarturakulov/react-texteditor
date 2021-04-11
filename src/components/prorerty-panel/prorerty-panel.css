@@ -1,0 +1,48 @@
+.prorerty-panel{
+    background-color: #FFF;
+    height: 100vh;
+    max-width: 240px;
+    width: 100%;
+    padding: 17px;
+
+
+}
+
+.panel-caption{
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #788994;
+    margin-bottom: 11px;
+}
+
+.btn-save{
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 210px;
+    height: 40px;
+    background: #2AC45D;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.btn-save:hover{
+    background: #27b155;
+}
+
+.weight_size-box{
+    display: flex;
+    margin-top: 10px;
+}
