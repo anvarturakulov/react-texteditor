@@ -19,8 +19,16 @@ export default class FontFamilyList extends Component {
         const options = [];
 
         const load = async () => {
-            const res = await fetch('https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBoZvaAD_fqwU2UWRvb6_ZFP-4NcLZaHdo');
-            return await res.json();
+            const startFontList =  localStorage.getItem("fontlist");
+            if (startFontList == null) {
+                console.log('loading');
+                const res = await fetch('https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBoZvaAD_fqwU2UWRvb6_ZFP-4NcLZaHdo');
+                const saveData = await res.json();
+                localStorage.setItem("fontlist", JSON.stringify(saveData));
+                return saveData;
+            } else {
+                return await JSON.parse(startFontList);
+            }
         }
     
         load().then(data => {
