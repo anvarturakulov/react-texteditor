@@ -5,6 +5,7 @@ import {Editor, EditorState, RichUtils, getDefaultKeyBinding,convertToRaw,conver
 import './editor-page.css';
 import './draft-js.css';
 
+
 export default class EditorPage extends Component {
     constructor(props) {
         super(props);
@@ -94,11 +95,8 @@ export default class EditorPage extends Component {
         
         const styleMapStart = this.loadStyleMap();
         const styleMap = Object.assign(styleMapStart, {[idNewStyle]: newStyleText});
-
         this.saveStyleMap(styleMap);
 
-          // this.onChange(RichUtils.toggleInlineStyle(this.state.editorState,this.props.idNewStyle));
-        
         return (
           <div className="RichEditor-root">
 

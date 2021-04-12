@@ -23,6 +23,8 @@ export default class App extends Component  {
 
     applyNewStyle(idNewStyle, newStyleText) {
         this.setState({idNewStyle, newStyleText})
+        const {fontloader} = this.props;
+        fontloader(newStyleText.fontFamily);
     }
 
     render() {
